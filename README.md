@@ -1,7 +1,7 @@
 PHP+SQLITE的，默认账号密码都是`admin`
 管理地址在 你的域名/mc/
 代码很简单，请自用修改即可～
-
+js中有两个`你的域名`的图片位，请换成你的域名。 
 ## 检测更新
 ```
 POST https://你的域名/app/check.php
@@ -67,7 +67,7 @@ function checkVersion(appid){
 	uni.getSystemInfo({
 		success: res => {
 			uni.request({
-				url: 'https://apps.sdxtsz.com/app/check.php',
+				url: 'https://你的域名/app/check.php',
 				method: 'POST',
 				header: {
 					'Accept': 'application/json',
@@ -117,7 +117,7 @@ function showDialog(updateInfo) {
 	const descriptionList = drawtext((updateInfo.updateContent || '发现新版本'), viewContentWidth)
 	let popupViewHeight = 80 + 20 + 20 + 90 + 10
 	let popupViewContentList = [{
-			src: 'https://apps.sdxtsz.com/assets/img/up.png',
+			src: 'https://你的域名/assets/img/up.png',
 			id: "logo",
 			tag: "img",
 			position: {
